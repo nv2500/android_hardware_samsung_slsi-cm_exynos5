@@ -46,8 +46,10 @@ PRODUCT_PACKAGES += \
 	libExynosOMX_Core
 
 # hw composer HAL
+ifneq ($(BOARD_USES_PREBUILT_HWCOMPOSER), true)
 PRODUCT_PACKAGES += \
 	hwcomposer.exynos5
+endif
 
 # MobiCore
 PRODUCT_PACKAGES += \
